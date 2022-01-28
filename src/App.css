@@ -3,6 +3,16 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+.App {
+	height: 100vh;
+}
+.pages {
+	height: 100vh;
+}
 .main-image {
 	width: 100px;
+}
+.chat-div {
+	overflow: auto;
+	height: 90%;
 }
