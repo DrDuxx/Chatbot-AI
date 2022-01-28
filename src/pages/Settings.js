@@ -171,7 +171,7 @@ const Settings = () => {
       <div
         onClick={() => {
           setEditValues((editValues) => {
-            let newPatterns = editValues.patterns
+            let newPatterns = editValues.patterns.slice()
             newPatterns.push('')
             return { ...editValues, patterns: newPatterns }
           })
@@ -205,7 +205,7 @@ const Settings = () => {
       <div
         onClick={() => {
           setEditValues((editValues) => {
-            let newResponses = editValues.responses
+            let newResponses = editValues.responses.slice()
             newResponses.push('')
             return { ...editValues, responses: newResponses }
           })
