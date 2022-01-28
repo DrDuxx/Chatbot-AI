@@ -9,7 +9,7 @@ function Socket() {
   const [value, setValue] = useState('')
 
   useEffect(() => {
-    const newSocket = io(`http://localhost:5000`)
+    const newSocket = io(process.env.REACT_APP_API)
     setSocket(newSocket)
     return () => newSocket.close()
   }, [setSocket])
