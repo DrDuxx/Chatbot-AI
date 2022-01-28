@@ -40,6 +40,7 @@ const Settings = () => {
     axios.post(`${process.env.REACT_APP_API}/intent`, { tag }).then((res) => {
       if (res?.status === 200) {
         getTags()
+        setType('list')
       }
     })
   }
@@ -48,6 +49,7 @@ const Settings = () => {
     axios.put(`${process.env.REACT_APP_API}/intent`, data).then((res) => {
       if (res?.status === 200) {
         getTags()
+        setType('list')
       }
     })
   }
@@ -212,6 +214,18 @@ const Settings = () => {
         }}
       >
         add new response
+      </div>
+      <div
+        onClick={() => {
+          editTag({
+            oldTag: selectedTag.tag,
+            newTag: editValues.newTag,
+            patterns: editValues.patterns,
+            responses: editValues.responses,
+          })
+        }}
+      >
+        EDIT
       </div>
     </div>
   )
