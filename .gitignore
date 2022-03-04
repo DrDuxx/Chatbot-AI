@@ -2,11 +2,10 @@
 node_modules
 /.pnp
 .pnp.js
-client/.env
-server/.env
 
 # testing
 /coverage
 
 # production
 /build
+.env
